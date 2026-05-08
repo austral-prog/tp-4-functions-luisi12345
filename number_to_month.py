@@ -1,34 +1,32 @@
 # Replace the "ANSWER HERE" for your answer
 
 def number_to_month(month):
-
     if month == 1:
-        return "enero"
+        return 'enero'
     elif month == 2:
-        return "febrero"
+        return 'febrero'
     elif month == 3:
-        return "marzo"
+        return 'marzo'
     elif month == 4:
-        return "abril"
+        return 'abril'
     elif month == 5:
-        return "mayo"
+        return 'mayo'
     elif month == 6:
-        return "junio"
+        return 'junio'
     elif month == 7:
-        return "julio"
+        return 'julio'
     elif month == 8:
-        return "agosto"
+        return 'agosto'
     elif month == 9:
-        return "septiembre"
+        return 'septiembre'
     elif month == 10:
-        return "octubre"
+        return 'octubre'
     elif month == 11:
-        return "noviembre"
+        return 'noviembre'
     elif month == 12:
-        return "diciembre"
-    else:
-        return "error"
+        return 'diciembre'
 
-number_to_month(3)
+    else:
+        return 'error'
 
 

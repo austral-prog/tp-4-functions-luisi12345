@@ -8,9 +8,7 @@ def apply_tax(price, tax_pct):
     """Dado un precio y un porcentaje de impuesto, retorna el precio con el impuesto aplicado."""
     return price * (1 + tax_pct / 100)
 
-    # ________________________________________RESOLUCION EJERCICIO 5_______________________________________
-
-#________________________________________FINAL PRICE________________________________________
+# ---- Funciones a implementar ----
 
 def final_price(price, quantity, discount_pct, tax_pct):
     """
@@ -24,16 +22,18 @@ def final_price(price, quantity, discount_pct, tax_pct):
       4. Retornar el resultado redondeado a 2 decimales usando round().
     """
 
-    subtotal = price * quantity
+    subtotal= price * quantity
 
-    con_descuento = apply_discount(subtotal, discount_pct)
-    con_impuesto = apply_tax(con_descuento, tax_pct)
+    preciodescuento = apply_discount(subtotal, discount_pct)
+    precioimpuesto = apply_tax(preciodescuento, tax_pct)
 
-    redondeado = round(con_impuesto, 2)
+    redondeado = round(precioimpuesto, 2)
 
     return redondeado
 
-#________________________________________BEST DEAL________________________________________
+
+
+
 
 
 def best_deal(price_a, qty_a, disc_a, price_b, qty_b, disc_b, tax_pct):
@@ -45,21 +45,12 @@ def best_deal(price_a, qty_a, disc_a, price_b, qty_b, disc_b, tax_pct):
     Debe USAR la función final_price para resolver el ejercicio.
     """
 
-    total_A = price_a * qty_a
-    descuento_A = apply_discount(total_A, disc_a)
-    impuesto_A = apply_tax(descuento_A, tax_pct)
-    precio_final_A = impuesto_A
+    Afinal= final_price(price_a, qty_a, disc_a, tax_pct)
 
-    total_B = price_b * qty_b
-    descuento_B = apply_discount(total_B, disc_b)
-    impuesto_B = apply_tax(descuento_B, tax_pct)
-    precio_final_B = impuesto_B
 
-    if precio_final_A > precio_final_B:
-        final_price = "B"
-    elif precio_final_A < precio_final_B:
-        final_price = "A"
+    Bfinal= final_price(price_b, qty_b, disc_b, tax_pct)
+
+    if Afinal<=Bfinal:
+        return "A"
     else:
-        final_price = "A"
-
-    return final_price
+      return "B"
