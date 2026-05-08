@@ -2,6 +2,8 @@
 
 import math
 
+import math
+
 #________________________________________ROOTS________________________________________
 
 def roots(a, b, c):
@@ -56,7 +58,7 @@ def to_string(a, b, c):
 def derivation(a, b, c):
     if 2*a == 0:
         return f"f'(x) = {b}"
-    elif b == 0:
+    elif b==0:
         return f"f'(x) = {2*a} * X"
 
     return f"f'(x) = {2*a} * X + {b}"
